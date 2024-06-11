@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom"
-import "./App.css"
 import {About, Contact, Hero, Experience, Projects,Navbar} from "./components"
 
 const App = () => {

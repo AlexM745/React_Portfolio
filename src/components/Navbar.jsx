@@ -6,10 +6,13 @@ import { Link } from "react-router-dom"
 
 const Navbar = () => {
     return (
-        <nav className="w-full flex items-center py-5 fixed top-0 z-20">
+        <nav className="">
             <img src={logo}alt="logo" className="logo" />
             <div className="menu"></div>
-            <link></link>
+            <Link className="menuListItem">Home</Link>
+            <Link className="menuListItem">About</Link>
+            <Link className="menuListItem">Portfolio</Link>
+            <Link className="menuListItem">Experience</Link>
             <button className="menuBtn">
                 <img src="" alt="" /> Contact Me
             </button> 
