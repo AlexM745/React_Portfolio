@@ -22,31 +22,57 @@ const Navbar = () => {
                         window.scroll(0, 0);
                     }} >
                     <img src={logo} alt="logo" className=" w-9 h-9 object-contain" />
-                    <p className="text-white text-[20px] font bold cursor-pointer">Alexis Merino</p>
+                    <p className="text-white text-[16px] font bold cursor-pointer flex">Alexis Merino</p>
 
-                {/* The Navigaton links */}
+                    {/* The Navigaton links */}
 
                 </Link>
-                <ul className="list-none hidden sm:flex flex-row gap-9">
-                    <li className="text-secondary text-[21px] font-medium cursor-pointer">
+                <ul className="list-none hidden sm:flex flex-row gap-10">
+                    <li className="text-secondary text-[18px] font-medium cursor-pointer">
                         {[
                             ["About", "#about"],
                             ["Portfolio", "#portfolio"],
                             ["Experience", "#experience"],
                             ["Contact", "#contact"],
                         ].map(([title, url]) => (
-                            <a href={url} className="hover:text-white  p-4">{title}</a>
+                            <a href={url} className="hover:text-white  p-4"onClick={()=> {
+                                setActive(title);
+                            }}>{title}</a>
                         ))}
                     </li>
                 </ul>
 
-                {/* Menue icon */}
+                {/* Menu icon */}
 
-                <div>
-                    <img src={toggle ? close :menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer"
+                <div className="sm:hidden flex flex-1 justify-end items-center">
+                    <img src={toggle ? close : menu} alt="menu" className="w-[28px] h-[28px] object-contain cursor-pointer"
                         onClick={() => {
                             setToggle(!toggle);
                         }} />
+                </div>
+                {/* Menu */}
+
+                <div className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}>
+
+                    <ul className="list-none flex justify-end items-start flex-col gap-4">
+
+                        <li className="text-secondary font-Monserrat font-medium cursor-pointer text-[16px] ">
+                            {[
+                                ["About", "#about"],
+                                ["Portfolio", "#portfolio"],
+                                ["Experience", "#experience"],
+                                ["Contact", "#contact"],
+                            ].map(([title, url]) => (
+                                <a href={url} className="hover:text-white p-1" 
+                                onClick={()=> {
+                                    setToggle(!toggle);
+                                    setActive(title);
+                                }}>{title}</a>
+                            ))}
+                        </li>
+                    </ul>
+
+
                 </div>
 
             </div>
