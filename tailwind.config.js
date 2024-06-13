@@ -7,10 +7,10 @@ export default {
       colors: {
         primary: "black",
         secondary: "#b6dffe",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        tertiary: "#655CF0",
+        "grey-90": "#191919",
+        "grey-95": "#0D0D0D",
+        "purple-100": "#6D8DFF",
       },
       screens: {
         xs: "450px",
