@@ -15,7 +15,10 @@ export default {
       screens: {
         xs: "450px",
       },
+
+      // background image
       backgroundImage: {
+        "heroBanner": "url('/src/assets/blacksand.jpg')",
       },
     },
   },
