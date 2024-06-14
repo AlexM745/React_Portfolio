@@ -13,13 +13,6 @@ const About = () => {
             </p>
 
             <div className="mt-20 flex flex-wrap gap-10">
-            {[
-                            ["Web developer"],
-                            ["Backend Developer"],
-                            ["React Developer"],
-                        ].map(([title]) => (
-                            <a>{title}</a>
-                        ))}
             </div>
 
 

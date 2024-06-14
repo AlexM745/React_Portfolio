@@ -1,10 +1,11 @@
 import React from "react"
-
-
+import Spline from '@splinetool/react-spline';
+import InteractiveLogo from "./InteractiveLogo";
 const Hero = () => {
     return (
         // hero section 
         <section className="relative w-full h-screen mx-auto">
+            
 {/* This div contains my name and ocupation. */}
             <div
                 className="absolute inset-0 top-[120px]  max-w-7xl mx-auto flex sm:px-16 px-6 flex-row items-start gap-5"
@@ -26,6 +27,10 @@ const Hero = () => {
                     </p>
                 </div>
             </div>
+
+
+            <InteractiveLogo />
+            
         </section>
     )
 }

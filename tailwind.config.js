@@ -18,7 +18,7 @@ export default {
 
       // background image
       backgroundImage: {
-        "heroBanner": "url('/src/assets/blacksand.jpg')",
+        
       },
     },
   },
