@@ -1,7 +1,6 @@
-import React from "react"
-import Spline from '@splinetool/react-spline';
+// importing the spline logo and motion from framer motion for animations
 import InteractiveLogo from "./InteractiveLogo";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 const Hero = () => {
     return (
@@ -29,9 +28,10 @@ const Hero = () => {
                     </p>
                 </div>
             </div>
+            {/* Spline logo */}
+            <InteractiveLogo />
 
-            <InteractiveLogo/>
-
+            {/* Animation to scroll down to about section */}
             <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
                 <a href='#about'>
                     <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
