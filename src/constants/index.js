@@ -1,8 +1,29 @@
 // this file will have all the information so that it is passed to files
 // if i need to edit I can do that in one file
- import{ backend, creator, web
+import { backend, react, web } from '../assets';
 
- } from '../assets';
+
+
+
+
+const navLinks = [
+    {
+        id: "about",
+        title: "About",
+    },
+    {
+        id: "experience",
+        title: "Experience",
+    },
+    {
+        id: "portfolio",
+        title: "Portfolio",
+    },
+    {
+        id: "contact",
+        title: "Contact",
+    },
+];
 
 const skills = [
     {
@@ -15,7 +36,7 @@ const skills = [
     },
     {
         title: "React Developer",
-        icon: creator,
+        icon: react,
     },
 ];
 
@@ -31,4 +52,4 @@ const experiences = [
 
 // exporting the array of objects so that I can use them on the different sections on jsx files
 
-export { skills, experiences, projects };
+export { skills, experiences, projects, navLinks };
