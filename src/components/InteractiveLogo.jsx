@@ -7,6 +7,8 @@ import Spline from '@splinetool/react-spline';
 export default function SplineLogo() {
 
     return (
+
+        // went to spline.com and created a 3d model with animation and exported as react code.
     
         <Spline scene="https://prod.spline.design/EvtshjtSSAP9FjJw/scene.splinecode" />
     );
