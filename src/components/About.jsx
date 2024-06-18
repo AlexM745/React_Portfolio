@@ -1,36 +1,35 @@
 import React from "react";
-import Tilt from "react-parallax-tilt";
+import Tilt from "react-parallax-tilt"
 import { motion } from "framer-motion";
 import { skills } from "../constants";
 
 // this is the skill cards that will be rendered in the div seciton in about me component.
-const SkillsCard = (index, title, icon) => {
+const SkillsCard = ({ index, title, icon }) => {
     return (
-        // using react parallax tilt to give the cards a tilt effect
-        <Tilt className="xs:w-[250px] w-full">
+        //using tilt from react-parallax tilt to give cards a tilt effect
+        <Tilt className="xs:w-[250px] w-full"
+            tiltMaxAngleX={45} tiltMaxAngleY={45} transitionSpeed={450} scale={1}>
+            {/* using framer motion to give the cards an animation */}
             <motion.div variants={("right", "spring", 0.5 * index, 0.75)}
-                className="-full blue-gradient p-[1px] rounded-[20px] shadow-card">
-                <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-row'
-                >
-                    {/* the icons of the skills are being passed through */}
-                    <img
-                        src={icon}
-                        alt='web-development'
-                        className='w-16 h-16 object-contain'
-                    />
-
+                className="w-full blue-gradient p-[1px] rounded-[20px] shadow-card">
+                    {/* This is the cards for each skill */}
+                <div className="bg-tertiary rounded-[20px] py-5 px-12 min-h=[280px] flex justify-evenly items-center flex-col" >
+                    {/* Thjs is the icon of each skill */}
+                    <img src={icon} alt="skill icons" className="w-16 h-16 object-contain align" />
+                    {/* This is the title of each skill */}
+                    <h3 className="text-white text-[20] font-bold text-center">{title}</h3>
                 </div>
+
             </motion.div>
+
         </Tilt>
-    );
-};
-
-
+    )
+}
 
 const About = () => {
     return (
         <>
-        {/* useing framer motion to add animation to the text */}
+            {/* using framer motion to add animation to the text */}
             <motion.div variants={{}}
             >
                 {/* the header section of the about me  */}
@@ -40,19 +39,19 @@ const About = () => {
                     Overview.</h2>
             </motion.div >
             {/* description of myself */}
-            <motion.p variants={("", "", 0.1, 1)}>
-                <p className=" mt-4 text-secondary text-[20] max-w-3xl leading-[30px] ">
-                    I am skilled software developer with experience in React, Javascript, HTML, CSS Frameworks, Databases and API.
-                    I am a quick learner and collaborate well in teams and with clients to create efficient and user-friendly ways to solve real-world problems.Let's work together to make your ideas come to life!
-                </p>
+            <motion.p variants={("", "", 0.1, 1)}
+                className=" mt-4 text-secondary text-[20] max-w-3xl leading-[30px] ">
+
+                I am skilled software developer with experience in React, Javascript, HTML, CSS Frameworks, Databases and API.
+                I am a quick learner and collaborate well in teams and with clients to create efficient and user-friendly ways to solve real-world problems.Let's work together to make your ideas come to life!
+
             </motion.p>
 
-            <div className="mt-20 flex flex-wrap gap-10">
+            <div className="mt-10 mb-10 flex flex-wrap gap-10">
                 {/* looping over the skills and indexes */}
                 {skills.map((skill, index) => (
-                    <SkillsCard key={skill.title} index={index} />
+                    <SkillsCard key={skill.title} index={index} {...skill} />
                 ))}
-
             </div>
 
 
