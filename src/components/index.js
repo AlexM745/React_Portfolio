@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
+import Footer from "./Footer"
 
 
 
@@ -16,4 +17,5 @@ export {
     Experience,
     Projects,
     Contact,
+    Footer
 };

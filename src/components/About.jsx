@@ -32,7 +32,7 @@ const SkillsCard = ({ index, title, icon }) => {
 const About = () => {
     return (
         <>
-            <div className="flex flex-row">
+            <div className="flex flex-row xl:pl-36" >
                 {/* using framer motion to add animation to the text */}
                 <motion.div variants={textVariant()} className="pr-10">
                     {/* the header section of the about me  */}
@@ -51,7 +51,7 @@ const About = () => {
             {/* description of myself */}
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
-                className=" mt-4 text-secondary text-[20] max-w-3xl leading-[30px] ">
+                className=" mt-4 text-secondary text-[20] max-w-3xl leading-[30px] xl:pl-36">
 
                 I am a dedicated and detail-oriented Full Stack Web Developer with a comprehensive coding bootcamp experience that has equipped me with robust technical skills in both frontend and backend technologies. 
                 My expertise includes HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Throughout my training, I have developed a strong foundation in web development principles, project management, and agile methodologies.
@@ -62,7 +62,7 @@ const About = () => {
             </motion.p>
 
 
-            <div className="pl-20 mt-20 flex flex-wrap gap-10">
+            <div className="pl-20 mt-20 flex flex-wrap gap-10 xl:pl-36">
                 {/* looping over the skills and indexes */}
                 {skills.map((skill, index) => (
                     <SkillsCard key={skill.title} index={index} {...skill} />

@@ -1,5 +1,6 @@
 import { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
+import SectionWrapper from "./SectionWrapper";
 
 
 const Contact = () => {
@@ -22,7 +23,7 @@ const Contact = () => {
 
 
     return (
-        <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+        <div className="xl:mt-12 xl:pl-36 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
             <div className="flex-[0.75] bg-grey-90 p-8 rounded-2xl">
                 <p className="sm:text-[20px] text-[16px] text-secondary uppercase tracking-wider">
                     Get in touch</p>
@@ -83,4 +84,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default SectionWrapper(Contact,"contact")
