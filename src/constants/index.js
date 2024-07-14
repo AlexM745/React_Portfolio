@@ -1,6 +1,6 @@
 // this file will have all the information so that it is passed to files
 // if i need to edit I can do that in one file
-import { backend, react, web } from '../assets';
+import { backend, react, web, frontend } from '../assets';
 
 
 
@@ -29,6 +29,10 @@ const skills = [
     {
         title: "Web Developer",
         icon: web,
+    },
+    {
+        title: "FrontEnd Developer",
+        icon: frontend,
     },
     {
         title: "Backend Developer",

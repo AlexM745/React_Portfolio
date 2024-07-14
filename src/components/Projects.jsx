@@ -1,10 +1,15 @@
 import React from "react"
+import Tilt from "react-parallax-tilt"
+import { motion } from "framer-motion";
 
+import SectionWrapper from "./SectionWrapper";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../../motion";
 
 const Projects = () => {
     return (
         <>
-             <p className="sm:text-[20px] text-[16px] text-secondary uppercase tracking-wider">
+            <p className="sm:text-[20px] text-[16px] text-secondary uppercase tracking-wider">
                 My projects</p>
             <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Portfolio.</h2>
 
@@ -22,4 +27,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default  SectionWrapper(Projects,"");

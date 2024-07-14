@@ -1,5 +1,5 @@
 import React from "react"
-
+import SectionWrapper from "./SectionWrapper";
 
 const Experience = () => {
     return (
@@ -22,4 +22,4 @@ const Experience = () => {
     )
 }
 
-export default Experience
+export default SectionWrapper(Experience,"")
