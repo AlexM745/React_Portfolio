@@ -1,7 +1,8 @@
 import { useState, useRef } from "react"
 import emailjs from "@emailjs/browser"
 import SectionWrapper from "./SectionWrapper";
-
+import { motion } from "framer-motion";
+import { slideIn } from "../../motion";
 
 const Contact = () => {
 
@@ -17,14 +18,62 @@ const Contact = () => {
     // this is a useState for when the submit button is clicked
     const [loading, setLoading] = useState(false);
     // this is a function that calls when there is any user input 
-    const handleChange = (e) => { };
+    const handleChange = ({ target: { name, value } }) => {
+        setForm((form) => ({
+            ...form,
+            [name]: value,
+        }));
+    };
     // this is wrapper for react-hook-form to manage the user entered data to the onSubmit function 
-    const handleSubmit = (e) => { };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setLoading(true);
+
+        const serviceID = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID;
+        const templateID = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceID || !templateID || !publicKey) {
+            setLoading(false);
+            alert("EmailJS configuration is missing. Please check your environment variables.");
+            return;
+        }
+
+        try {
+            await emailjs.send(
+                serviceID,
+                templateID,
+                {
+                    from_name: form.name,
+                    to_name: "Alexis Merino",
+                    from_email: form.email,
+                    to_email: "alexismerino49@gmail.com",
+                    message: form.message,
+                },
+                publicKey
+            );
+
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible.");
+
+            setForm({
+                name: "",
+                email: "",
+                message: "",
+            });
+        } catch (error) {
+            setLoading(false);
+            console.error(error);
+
+            alert("Oh, something went wrong. Please try again.");
+        }
+    };
 
 
     return (
         <div className="xl:mt-12 xl:pl-36 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-            <div className="flex-[0.75] bg-grey-90 p-8 rounded-2xl">
+            <motion.div variants={slideIn("left", "tween", 0.2, 1)}
+                className="flex-[0.75] bg-grey-90 p-8 rounded-2xl">
                 <p className="sm:text-[20px] text-[16px] text-secondary uppercase tracking-wider">
                     Get in touch</p>
                 <h3 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
@@ -74,14 +123,14 @@ const Contact = () => {
                         type='submit'
                         className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg shadow-indigo-500/60'
                     >
-                    {/*  loading state when the button is activated sending and if not send */}
+                        {/*  loading state when the button is activated sending and if not send */}
                         {loading ? "Sending..." : "Send"}
 
                     </button>
                 </form>
-            </div>
+            </motion.div>
         </div>
     )
 }
 
-export default SectionWrapper(Contact,"contact")
+export default SectionWrapper(Contact, "contact")
