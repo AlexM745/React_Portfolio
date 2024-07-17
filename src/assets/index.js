@@ -11,5 +11,8 @@ import retrobox from "./retrobox.png"
 import roadster from './roadster.png'
 import github from "./github.png"
 import codingQuiz from "./coding-quiz.png"
+import swisd from "./swisd.png"
+import greathearts from "./greathearts.png"
+import fullstack from "./fullstack.png"
 
-export {backend, react, web, logo, menu, close, alexis, frontend, financeTracker, roadster, retrobox, github, codingQuiz};
+export {backend, react, web, logo, menu, close, alexis, frontend, financeTracker, roadster, retrobox, github, codingQuiz, swisd, fullstack, greathearts};

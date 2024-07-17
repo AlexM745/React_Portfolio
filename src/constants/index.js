@@ -1,6 +1,6 @@
 // this file will have all the information so that it is passed to files
 // if i need to edit I can do that in one file
-import { backend, react, web, frontend, financeTracker, retrobox, roadster, codingQuiz } from '../assets';
+import { backend, react, web, frontend, financeTracker, retrobox, roadster, codingQuiz, fullstack, greathearts, swisd } from '../assets';
 
 
 
@@ -134,8 +134,43 @@ const projects = [
 
 
 const experiences = [
-
-]
+    {
+        title: "Student",
+        company_name: "Full Stack Flex Program",
+        icon: fullstack,
+        iconBg: "#383E56",
+        date: "January 2024 - July 2024",
+        points: [
+            "Mastered frontend and backend technologies (HTML, CSS, JavaScript, React, Node.js, Express, MongoDB).",
+            "Completed real-world projects to enhance problem-solving and development skills.",
+            "Improved teamwork and communication skills in coding projects",
+        ],
+    },
+    {
+        title: "Fine Arts Teacher",
+        company_name: "Southwest ISD",
+        icon: swisd,
+        iconBg: "#228B22",
+        date: "July 2023 - Present",
+        points: [
+            "Successfully organized and conducted two impactful student concerts, showcasing musical talents and fostering community engagement.",
+            "Assisted in coordinating school events and contributed to the success of large assemblies, ensuring smooth execution and positive student experiences.",
+            "Innovatively designed and implemented engaging curriculum modules that enhanced student participation and achievement in fine arts programs..",
+        ],
+    },
+    {
+        title: "Music Teacher K-2nd",
+        company_name: "Great Hearts Texas",
+        icon: greathearts,
+        iconBg: "#89CFF0",
+        date: "July 2022 - July 2023",
+        points: [
+            "Organizing and Directing Performances: Successfully directed a concert within three weeks of assuming the position, demonstrating strong organizational and leadership skills to showcase students' talents effectively.",
+            "Providing Continuous Support: Actively assisted in various tasks and responsibilities, ensuring the smooth operation of music classes and events. Consistently available to support colleagues and students, contributing to a collaborative and productive environment",
+            "Being a Reliable Resource: Recognized as a go-to person for tasks and responsibilities, indicating reliability and a proactive approach.Demonstrated commitment to the success of the music program by always being ready to help when needed.",
+        ],
+    },
+];
 
 // exporting the array of objects so that I can use them on the different sections on jsx files
 
