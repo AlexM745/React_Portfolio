@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../../motion";
 import { skills } from "../constants";
 import SectionWrapper from "./SectionWrapper";
-import alexis from "../assets/alexis.jpg"
+import alexis from "../assets/alexis.png"
 // this is the skill cards that will be rendered in the div seciton in about me component.
 const SkillsCard = ({ index, title, icon }) => {
     return (
@@ -53,12 +53,7 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className=" mt-4 text-secondary text-[20] max-w-3xl leading-[30px] xl:pl-36">
 
-                I am a dedicated and detail-oriented Full Stack Web Developer with a comprehensive coding bootcamp experience that has equipped me with robust technical skills in both frontend and backend technologies. 
-                My expertise includes HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. Throughout my training, I have developed a strong foundation in web development principles, project management, and agile methodologies.
-                I am passionate about creating seamless user experiences and efficient, scalable web applications. 
-                My hands-on experience in building dynamic, responsive websites and applications has honed my problem-solving abilities and attention to detail.
-                I thrive in collaborative environments and am committed to continuous learning and staying updated with the latest industry trends and technologies.
-                With a proactive approach to challenges and a strong commitment to delivering high-quality solutions, I am eager to contribute to a dynamic team and take on new challenges in the field of web development.
+                I am a Full Stack Web Developer with expertise in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I am passionate about creating seamless user experiences and efficient, scalable web applications. With hands-on experience in building dynamic, responsive websites, I thrive in collaborative environments and am committed to continuous learning and delivering high-quality solutions
             </motion.p>
 
 

@@ -66,6 +66,7 @@ const projects = [
         ],
         image: roadster,
         source_code_link: "https://github.com/AlexM745/Roadtrip-Playlist-Maker",
+        live_demo_link: "",
     },
     {
         name: "RetroBox",
@@ -87,6 +88,7 @@ const projects = [
         ],
         image: retrobox,
         source_code_link: "https://github.com/AlexM745/RetroBox",
+        live_demo_link: "",
     },
     {
         name: "Finance Tracker",
@@ -108,11 +110,12 @@ const projects = [
         ],
         image: financeTracker,
         source_code_link: "https://github.com/Finance-Tracker",
+        live_demo_link: "",
     },
     {
         name: "Coding Quiz",
         description:
-            "Web application that lets users answer questions about Javascript to help get prepared for job interviews.",
+            "Web application that prepares java script knowledge for job interviews.",
         tags: [
             {
                 name: "HTML",
@@ -129,13 +132,15 @@ const projects = [
         ],
         image: codingQuiz,
         source_code_link: "https://github.com/coding-quiz",
+        live_demo_link: "https://alexm745.github.io/coding-quiz/",
+
     },
 ];
 
 
 const experiences = [
     {
-        title: "Student",
+        title: "Developer",
         company_name: "Full Stack Flex Program",
         icon: fullstack,
         iconBg: "#383E56",
@@ -165,9 +170,9 @@ const experiences = [
         iconBg: "#89CFF0",
         date: "July 2022 - July 2023",
         points: [
-            "Organizing and Directing Performances: Successfully directed a concert within three weeks of assuming the position, demonstrating strong organizational and leadership skills to showcase students' talents effectively.",
-            "Providing Continuous Support: Actively assisted in various tasks and responsibilities, ensuring the smooth operation of music classes and events. Consistently available to support colleagues and students, contributing to a collaborative and productive environment",
-            "Being a Reliable Resource: Recognized as a go-to person for tasks and responsibilities, indicating reliability and a proactive approach.Demonstrated commitment to the success of the music program by always being ready to help when needed.",
+            " Successfully directed a concert within three weeks of assuming the position, demonstrating strong organizational and leadership skills to showcase students' talents effectively.",
+            " Actively assisted in various tasks and responsibilities, ensuring the smooth operation of music classes and events. Consistently available to support colleagues and students, contributing to a collaborative and productive environment",
+            " Recognized as a go-to person for tasks and responsibilities, indicating reliability and a proactive approach.Demonstrated commitment to the success of the music program by always being ready to help when needed.",
         ],
     },
 ];

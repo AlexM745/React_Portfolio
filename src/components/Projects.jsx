@@ -15,6 +15,7 @@ const ProjectCard = ({
     tags,
     image,
     source_code_link,
+    live_demo_link,  // Added this line
 }) => {
     return (
         <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -33,17 +34,28 @@ const ProjectCard = ({
                         className='w-full h-full object-cover rounded-2xl'
                     />
 
-                    <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+                    <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
                         <div
                             onClick={() => window.open(source_code_link, "_blank")}
-                            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+                            className=' w-14 h-14 rounded-full flex justify-center items-center cursor-pointer bg-red-500 hover:bg-blue-700 '
                         >
                             <img
                                 src={github}
                                 alt='source code'
-                                className='w-1/2 h-1/2 object-contain'
+                                className='w-1/2 h-1/2 object-contain '
                             />
                         </div>
+                        
+                        
+                        {/* delpyed site button */}
+                        {live_demo_link && (
+                            <button
+                                onClick={() => window.open(live_demo_link, "_blank")}
+                                className='bg-green-500 hover:bg-green-700 text-white font-bold w-14 h-14 rounded-full flex justify-center items-center cursor-pointer'
+                            >
+                                Live Site
+                            </button>
+                        )}
                     </div>
                 </div>
 
@@ -66,6 +78,7 @@ const ProjectCard = ({
         </motion.div>
     );
 };
+
 
 
 

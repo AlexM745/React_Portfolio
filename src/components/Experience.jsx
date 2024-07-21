@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
 import { textVariant } from "../../motion";
+import Tilt from "react-parallax-tilt"
 
 const ExperienceCard = ({ experience }) => {
     return (
@@ -63,13 +64,20 @@ const Experience = () => {
                     What I have done so far</p>
                 <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">Work Experience.</h2>
             </motion.div>
-            <div className="w-full flex">
-                <p className=" mt-3 text-secondary text-[18px] max-w-3l leading-[30px]">
-                    See my resume <a className="underline hover:text-white"
-                        href="https://docs.google.com/document/d/1DjOFCIChRQh6MRYiocedcQ6FoBfQqhp6_9CC6jMYHBA/edit?usp=sharing">
-                        here</a>.
-                </p>
-            </div>
+
+            <Tilt tiltMaxAngleX={45} tiltMaxAngleY={45} transitionSpeed={450} scale={1} >
+            <motion.div variants={textVariant()} className="w-full flex justify-center mt-5">
+                <a
+                    className="bg-tertiary hover:bg-secondary text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out"
+                    href="https://docs.google.com/document/d/1DjOFCIChRQh6MRYiocedcQ6FoBfQqhp6_9CC6jMYHBA/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View My Resume
+                </a>
+            </motion.div>
+
+            </Tilt>
             <div className="mt-20 flex flex-wrap gap-10">
                 <VerticalTimeline>
                     {experiences.map((experience, index) => (

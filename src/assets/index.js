@@ -4,7 +4,7 @@ import react from "./react.png";
 import close from "./close.png";
 import menu from "./menu.png";
 import logo from "./logo.svg";
-import alexis from "./alexis.jpg"
+import alexis from "./alexis.png"
 import frontend from "./frontend.png"
 import financeTracker from "./financeTracker.jpeg"
 import retrobox from "./retrobox.png"
