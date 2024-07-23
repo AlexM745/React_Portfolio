@@ -66,7 +66,7 @@ const projects = [
         ],
         image: roadster,
         source_code_link: "https://github.com/AlexM745/Roadtrip-Playlist-Maker",
-        live_demo_link: "",
+        live_demo_link: "https://roadster-music.netlify.app/",
     },
     {
         name: "RetroBox",
@@ -88,7 +88,7 @@ const projects = [
         ],
         image: retrobox,
         source_code_link: "https://github.com/AlexM745/RetroBox",
-        live_demo_link: "",
+        live_demo_link: "https://retrobox1-a061a0f43c58.herokuapp.com/",
     },
     {
         name: "Finance Tracker",
@@ -110,7 +110,7 @@ const projects = [
         ],
         image: financeTracker,
         source_code_link: "https://github.com/Finance-Tracker",
-        live_demo_link: "",
+        live_demo_link: "https://finance-tracker-r26w.onrender.com",
     },
     {
         name: "Coding Quiz",
@@ -132,7 +132,7 @@ const projects = [
         ],
         image: codingQuiz,
         source_code_link: "https://github.com/coding-quiz",
-        live_demo_link: "https://alexm745.github.io/coding-quiz/",
+        live_demo_link: "https://coding-quiz-javascript.netlify.app/",
 
     },
 ];
