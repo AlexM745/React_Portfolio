@@ -87,8 +87,8 @@ const projects = [
             },
         ],
         image: retrobox,
-        source_code_link: "https://github.com/AlexM745/RetroBox",
-        live_demo_link: "https://retrobox1-a061a0f43c58.herokuapp.com/",
+        source_code_link: "https://github.com/AlexM745/Retro_Box.git",
+        live_demo_link: "https://retrobox.onrender.com",
     },
     {
         name: "Finance Tracker",
